@@ -1,4 +1,4 @@
-﻿@model MyNewShop.Data.Entities.Country
+﻿@model MyNewShop.Data.Entities.Category
 
 @{
     ViewData["Title"] = "Delete";
@@ -10,7 +10,7 @@
 
 <div>
     
-    <partial name="_CountryDetails" />
+    <partial name="_CategoryDetails" />
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
