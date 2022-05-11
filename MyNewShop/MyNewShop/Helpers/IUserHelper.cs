@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using MyNewShop.Data.Entities;
+using MyNewShop.Models;
 
 namespace MyNewShop.Helpers
 {
@@ -14,6 +15,11 @@ namespace MyNewShop.Helpers
         Task AddUserToRoleAsync(User user, string roleName);
 
         Task<bool> IsUserInRoleAsync(User user, string roleName);
+
+        Task<SignInResult> LoginAsync(LoginVM model);
+
+        Task LogoutAsync();
+
 
     }
 }
