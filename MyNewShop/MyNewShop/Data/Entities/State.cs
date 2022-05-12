@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace MyNewShop.Data.Entities
 {
@@ -11,7 +12,7 @@ namespace MyNewShop.Data.Entities
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         public string Name { get; set; }
 
-
+        [JsonIgnore] //se usa esta data anotation para que no entre en un ciclo infinito en llenar combo
         public Country Country { get; set; }
 
         public ICollection<City> Cities { get; set; }

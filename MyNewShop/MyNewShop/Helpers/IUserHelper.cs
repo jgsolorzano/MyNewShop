@@ -10,6 +10,8 @@ namespace MyNewShop.Helpers
 
         Task<IdentityResult> AddUserAsync(User user, string password);
 
+        Task<User> AddUserAsync(AddUserVM model);
+
         Task CheckRoleAsync(string roleName);
 
         Task AddUserToRoleAsync(User user, string roleName);
